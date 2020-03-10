@@ -11,18 +11,18 @@ LETTERS = ('а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й',
 		 		'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я')
 
 # Путь к сохранениям. Указываем путь до файла.
-saves = r'D:\Games\S.T.A.L.K.E.R. - Объединенный Пак 2\appdata\savedgames'
+SAVES = r'D:\Games\S.T.A.L.K.E.R. - Объединенный Пак 2\appdata\savedgames'
 
 # Открываем файлы.
-for top, dirs, files in os.walk(saves):
+for top, dirs, files in os.walk(SAVES):
 	print(f'Общее количество файлов - {len(files)}.')
-	for name in files:
+	for file in files:
 		
 		# Проверяем файлы на кириллицу.
 		for letter in LETTERS:
-			if letter in name:
+			if letter in file:
 
 				# Если файл на кириллице, тогда удаляем.
-				print(f'{name} - удалена.')
-				os.remove(os.path.join(saves, name))
+				print(f'{file} - удалена.')
+				os.remove(os.path.join(SAVES, file))
 				break
