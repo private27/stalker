@@ -26,6 +26,3 @@ for top, dirs, files in os.walk(saves):
 				print(f'{name} - удалена.')
 				os.remove(os.path.join(saves, name))
 				break
-
-# Некорректно работает.
-# print(f'Количество файлов после удаление - {len(files)}.')
