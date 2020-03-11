@@ -25,5 +25,5 @@ for top, dirs, files in os.walk(SAVES):
 				# Если файл на кириллице, тогда удаляем.
 				print(f'{file} - удалена.')
 				os.remove(os.path.join(SAVES, file))
-				break		
-
+				break
+				
