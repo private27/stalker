@@ -26,3 +26,4 @@ for top, dirs, files in os.walk(SAVES):
 				print(f'{file} - удалена.')
 				os.remove(os.path.join(SAVES, file))
 				break		
+
